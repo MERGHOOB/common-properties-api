@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Document(collection = "properties") // Spring data mongoDB: Maps this class to a MangoDB collection "properties"
 @CompoundIndex(def = "{'entity': 1, 'entityId': 1, 'key': 1}", unique = true) // ensure uniqueness of the combination
-public class Properties {
+public class Property {
 
 	@Id   //Spring data MongoDB: mark the following fields as a primary key
 	private String id;  //MongoDB uses String IDs by default
